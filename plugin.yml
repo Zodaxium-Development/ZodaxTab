@@ -1,0 +1,6 @@
+name: ZodaxTab
+author: Zodaxium
+version: 1
+description: Zodaxium Custom Tab
+main: me.zodaxium.customtab.CustomTab
+depend: [TabAPI]
