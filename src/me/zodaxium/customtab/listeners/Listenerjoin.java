@@ -1,11 +1,11 @@
 package me.zodaxium.customtab.listeners;
 
 import me.zodaxium.customtab.CustomTab;
+import me.zodaxium.customtab.TabTask;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.scheduler.BukkitRunnable;
 
 public class Listenerjoin implements Listener{
 
@@ -18,9 +18,6 @@ public class Listenerjoin implements Listener{
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e){
-		plugin.getServer().getScheduler().runTaskLater(plugin, new BukkitRunnable(){
-			@Override
-			public void run(){ plugin.update(); }
-		}, 5);
+		plugin.getServer().getScheduler().runTaskLater(plugin, new TabTask(plugin), 5);
 	}
 }
