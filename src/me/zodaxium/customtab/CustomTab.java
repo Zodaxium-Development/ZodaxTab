@@ -11,6 +11,8 @@ public class CustomTab extends JavaPlugin{
 	public void onEnable(){
 		new Listenerjoin(this);
 		new Listenerquit(this);
+		
+		getServer().getScheduler().runTask(this, new TabTask(this));
 	}
 	
 	public String colorize(String message){
