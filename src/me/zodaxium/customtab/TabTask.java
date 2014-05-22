@@ -38,7 +38,7 @@ public class TabTask extends BukkitRunnable{
 						break;
 					}
 				}
-				TabAPI.setTabString(plugin, p, y, x, player.getDisplayName());
+				TabAPI.setTabString(plugin, p, y, x, player.getName());
 				x++;
 			}
 			/* Update Player */
